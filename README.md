@@ -1,7 +1,7 @@
 # AprendendoPython
-Utilizarei este Repositório para realizar meus estudos da Linguagem de Programação Python
+## Utilizarei este Repositório para realizar meus estudos da Linguagem de Programação Python
 
-Aqui serão postados os códigos referentes ao curso de Python do Curso em Video. Ele é dividido atualmente em 3 parte:
+> Aqui serão postados os códigos referentes ao curso de Python do Curso em Video. Ele é dividido atualmente em 3 parte:
 
 -> 1° Mundo:
   - [] Primeiros Passos com Python
@@ -10,10 +10,12 @@ Aqui serão postados os códigos referentes ao curso de Python do Curso em Video
   - [] Condições (if..else)
   - [] Adicionando Cores
   - [] Teste Final
+  
 -> 2° Mundo:
   - [] Condições (if..elif)
   - [] Repetições (for)
   - [] Repetições (While)
+  
 -> 3° Mundo:
   - [] Tuplas
   - [] Listas
