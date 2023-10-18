@@ -22,6 +22,6 @@
   - [X] Listas
   - [X] Dicionários
   - [X] Funções
-  - [] Modularizações
-  - [] Tratamento de Erros
-  - [] Teste Final
+  - [x] Modularizações
+  - [x] Tratamento de Erros
+  - [x] Teste Final
