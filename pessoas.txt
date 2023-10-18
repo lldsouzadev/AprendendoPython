@@ -1,0 +1,6 @@
+Leandro,30,M
+Camila,32,F
+Ivone,65,F
+Luiz,59,M
+João da Silva,50,M
+Juca,18,M
