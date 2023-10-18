@@ -4,24 +4,24 @@
 > Aqui serão postados os códigos referentes ao curso de Python do Curso em Video. Ele é dividido atualmente em 3 parte:
 
 -> 1° Mundo:
-  - [] Primeiros Passos com Python
-  - [] Tratando Dados e Fazendo Contas
-  - [] Usando Módulos
-  - [] Condições (if..else)
-  - [] Adicionando Cores
-  - [] Teste Final
+  - [X] Primeiros Passos com Python
+  - [X] Tratando Dados e Fazendo Contas
+  - [X] Usando Módulos
+  - [X] Condições (if..else)
+  - [X] Adicionando Cores
+  - [X] Teste Final
   
 -> 2° Mundo:
-  - [] Condições (if..elif)
-  - [] Repetições (for)
-  - [] Repetições (While)
-  - [] Teste Final
+  - [X] Condições (if..elif)
+  - [X] Repetições (for)
+  - [X] Repetições (While)
+  - [X] Teste Final
   
 -> 3° Mundo:
-  - [] Tuplas
-  - [] Listas
-  - [] Dicionários
-  - [] Funções
+  - [X] Tuplas
+  - [X] Listas
+  - [X] Dicionários
+  - [X] Funções
   - [] Modularizações
   - [] Tratamento de Erros
   - [] Teste Final
