@@ -4,3 +4,7 @@ Ivone,65,F
 Luiz,59,M
 João da Silva,50,M
 Juca,18,M
+Leandro Luiz de Souza,30,M
+Ivone Bernadete Grudzinski de Souza,65,F
+Luiz Carlos de Souza,59,M
+Camila Cristina de Souza,32,F

@@ -71,12 +71,12 @@ def ver_pessoas_cadastradas():
             if not linhas:
                 print("\033[31mNenhuma pessoa cadastrada.\033[0m")
             else:
-                print("{:<20} {:<10} {:<10}".format("Nome", "Idade", "Sexo"))
-                print("-" * 40)
+                print("{:<40} {:<10} {:<10}".format("Nome", "Idade", "Sexo"))
+                print("-" * 60)
                 
                 for linha in linhas:
                     nome, idade, sexo = linha.strip().split(',')
-                    print("{:<20} {:<10} {:<10}".format(nome, idade, sexo))
+                    print("{:<40} {:<10} {:<10}".format(nome, idade, sexo))
                     
         else:
             print("\033[31mNenhuma pessoa cadastrada.\033[0m")
