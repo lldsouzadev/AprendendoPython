@@ -1,7 +1,7 @@
 # AprendendoPython
 ## Utilizarei este Repositório para realizar meus estudos da Linguagem de Programação Python
 
-> Aqui serão postados os códigos referentes ao curso de Python do Curso em Video. Ele é dividido atualmente em 3 parte:
+> Aqui serão postados os códigos referentes ao curso de Python do Curso em Video entre outros pequenos projetos em Python:
 
 -> 1° Mundo:
   - [X] Primeiros Passos com Python
