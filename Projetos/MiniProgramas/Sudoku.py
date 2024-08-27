@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox, simpledialog
+from tkinter import messagebox
 import random
 
 class Sudoku:
@@ -9,6 +9,7 @@ class Sudoku:
         self.cells = {}
         self.notes = {}
         self.board = self.generate_board()
+        self.history = []  # Para armazenar o histórico das jogadas
         self.create_widgets()
 
     def create_widgets(self):
@@ -18,15 +19,16 @@ class Sudoku:
         for r in range(9):
             for c in range(9):
                 cell_frame = tk.Frame(frame, relief=tk.SUNKEN, borderwidth=1)
-                cell_frame.grid(row=r, column=c, padx=1, pady=1)
-                cell = tk.Entry(cell_frame, width=5, font=("Arial", 16), justify="center")
+                cell_frame.grid(row=r, column=c, padx=(1, 5) if c % 3 == 2 and c != 8 else 1, pady=(1, 5) if r % 3 == 2 and r != 8 else 1)
+                
+                cell = tk.Entry(cell_frame, width=2, font=("Arial", 16), justify="center")  # Tamanho do campo reduzido e quadrado
                 cell.grid(row=0, column=0, padx=5, pady=5)
 
                 if self.board[r][c] != 0:
                     cell.insert(0, str(self.board[r][c]))
                     cell.config(state="disabled")
                 else:
-                    cell.bind("<Button-1>", lambda event, r=r, c=c: self.on_click(r, c))
+                    cell.bind("<KeyRelease>", lambda event, r=r, c=c: self.on_key_release(event, r, c))
 
                 self.cells[(r, c)] = cell
                 self.notes[(r, c)] = []
@@ -38,11 +40,13 @@ class Sudoku:
         solve_btn = tk.Button(btn_frame, text="Resolver", command=self.solve_board)
         solve_btn.pack(side=tk.LEFT, padx=5)
 
+        undo_btn = tk.Button(btn_frame, text="Desfazer", command=self.undo_move)
+        undo_btn.pack(side=tk.LEFT, padx=5)
+
         reset_btn = tk.Button(btn_frame, text="Reiniciar", command=self.reset_board)
         reset_btn.pack(side=tk.LEFT, padx=5)
 
     def generate_board(self):
-        # Gera um tabuleiro de Sudoku completo e, em seguida, remove alguns números para criar um jogo.
         def fill_board(board):
             for i in range(9):
                 nums = list(range(1, 10))
@@ -59,7 +63,6 @@ class Sudoku:
             return True
 
         def remove_numbers(board, difficulty=40):
-            # Remove números do tabuleiro, deixando um número de pistas correspondentes à dificuldade.
             count = 0
             while count < difficulty:
                 r = random.randint(0, 8)
@@ -76,7 +79,6 @@ class Sudoku:
         return remove_numbers(board)
 
     def is_valid(self, board, r, c, num):
-        """Verifica se um número pode ser inserido em uma célula do Sudoku."""
         for i in range(9):
             if board[r][i] == num or board[i][c] == num:
                 return False
@@ -88,29 +90,37 @@ class Sudoku:
                     return False
         return True
 
-    def on_click(self, r, c):
-        """Lida com a inserção de números ou notas em uma célula."""
-        current_value = self.cells[(r, c)].get()
-        new_value = self.simple_input(f"Insira o valor para a célula ({r+1},{c+1}):")
-        if new_value and new_value.isdigit() and 1 <= int(new_value) <= 9:
-            if self.is_valid(self.board, r, c, int(new_value)):
-                self.cells[(r, c)].delete(0, tk.END)
-                self.cells[(r, c)].insert(0, new_value)
-                self.board[r][c] = int(new_value)
+    def on_key_release(self, event, r, c):
+        value = event.widget.get()
+        if value.isdigit() and 1 <= int(value) <= 9:
+            if self.is_valid(self.board, r, c, int(value)):
+                self.history.append((r, c, self.board[r][c]))  # Salva o estado anterior
+                if len(self.history) > 3:  # Limita o histórico a 3 jogadas
+                    self.history.pop(0)
+                self.board[r][c] = int(value)
+                self.check_completion()  # Verifica se o jogo foi completado
             else:
                 messagebox.showwarning("Inválido", "Este número não pode ser inserido nesta posição.")
-        elif new_value and new_value.isdigit() and 0 <= int(new_value) <= 9:
-            self.notes[(r, c)].append(new_value)
-            note_str = ','.join(self.notes[(r, c)])
-            self.cells[(r, c)].delete(0, tk.END)
-            self.cells[(r, c)].insert(0, note_str)
+                event.widget.delete(0, tk.END)
+        else:
+            event.widget.delete(0, tk.END)
 
-    def simple_input(self, prompt):
-        """Abre uma janela de diálogo simples para entrada do usuário."""
-        return simpledialog.askstring("Input", prompt)
+    def check_completion(self):
+        if all(all(cell != 0 for cell in row) for row in self.board):
+            messagebox.showinfo("Parabéns!", "Você completou o Sudoku!")
+
+    def undo_move(self):
+        if self.history:
+            r, c, previous_value = self.history.pop()
+            self.board[r][c] = previous_value
+            cell = self.cells[(r, c)]
+            cell.config(state="normal")
+            cell.delete(0, tk.END)
+            if previous_value != 0:
+                cell.insert(0, str(previous_value))
+                cell.config(state="disabled")
 
     def solve_board(self):
-        """Resolve o tabuleiro de Sudoku (modo automático)."""
         def solve(board):
             for r in range(9):
                 for c in range(9):
@@ -128,21 +138,19 @@ class Sudoku:
         self.update_board()
 
     def reset_board(self):
-        """Reinicia o tabuleiro de Sudoku."""
         self.board = self.generate_board()
+        self.history.clear()
         self.update_board()
 
     def update_board(self):
-        """Atualiza a interface gráfica de acordo com o estado do tabuleiro."""
         for r in range(9):
             for c in range(9):
+                cell = self.cells[(r, c)]
+                cell.config(state="normal")
+                cell.delete(0, tk.END)
                 if self.board[r][c] != 0:
-                    self.cells[(r, c)].delete(0, tk.END)
-                    self.cells[(r, c)].insert(0, str(self.board[r][c]))
-                    self.cells[(r, c)].config(state="disabled")
-                else:
-                    self.cells[(r, c)].config(state="normal")
-                    self.cells[(r, c)].delete(0, tk.END)
+                    cell.insert(0, str(self.board[r][c]))
+                    cell.config(state="disabled")
 
 def main():
     root = tk.Tk()
