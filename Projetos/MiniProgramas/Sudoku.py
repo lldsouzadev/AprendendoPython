@@ -102,8 +102,11 @@ class Sudoku:
             else:
                 messagebox.showwarning("Inválido", "Este número não pode ser inserido nesta posição.")
                 event.widget.delete(0, tk.END)
+                self.board[r][c] = 0  # Resetar a posição no tabuleiro para 0, pois o número não foi aceito
         else:
             event.widget.delete(0, tk.END)
+            self.board[r][c] = 0  # Garantir que o tabuleiro também reflete a remoção do número
+
 
     def check_completion(self):
         if all(all(cell != 0 for cell in row) for row in self.board):
