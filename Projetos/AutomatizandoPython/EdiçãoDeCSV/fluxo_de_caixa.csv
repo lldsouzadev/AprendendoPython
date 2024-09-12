@@ -1,0 +1,13 @@
+Data,Descrição,Receitas,Despesas,Saldo
+2024-03-01,Saldo Inicial,10000.00,0.00,10000.00
+2024-03-02,Venda de Produtos,5000.00,0.00,15000.00
+2024-03-03,Pagamento de Fornecedores,0.00,3000.00,12000.00
+2024-03-04,Recebimento de Clientes,0.00,2000.00,14000.00
+2024-03-05,Despesas Operacionais,0.00,1500.00,12500.00
+2024-03-06,Recebimento de Clientes,0.00,2500.00,10000.00
+2024-03-07,Pagamento de Despesas,0.00,1000.00,9000.00
+2024-03-08,Venda de Produtos,6000.00,0.00,15000.00
+2024-03-09,Recebimento de Clientes,0.00,3500.00,11500.00
+2024-03-10,Despesas Operacionais,0.00,1200.00,10300.00
+2024-03-11,Recebimento de Clientes,0.00,2800.00,7500.00
+2024-03-12,Pagamento de Despesas,0.00,900.00,6600.00
