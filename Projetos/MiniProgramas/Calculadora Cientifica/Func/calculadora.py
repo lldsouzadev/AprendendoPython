@@ -69,8 +69,8 @@ def arcotangente(a):
     except Exception as e:
         return f"Erro: {str(e)}"
     
-    # Funções hiperbólicas #
-    
+# Funções hiperbólicas #
+
 def seno_hiperbolico(a):
     try:
         return math.sinh(a)
@@ -89,8 +89,8 @@ def tangente_hiperbolica(a):
     except Exception as e:
         return f"Erro: {str(e)}"
     
-    # Funções hiperbólicas inversas#
-    
+# Funções hiperbólicas inversas#
+
 def arcseno_hiperbolico(a):
     try:
         return math.asinh(a)
@@ -111,22 +111,89 @@ def arcotangente_hiperbolica(a):
     
 # Funções logarítmicas #
 
+def logaritmo(a, base=10):
+    try:
+        return math.log(a, base)
+    except Exception as e:
+        return f"Erro: {str(e)}"
 
+def ln(a):
+    try:
+        return math.log(a)
+    except Exception as e:
+        return f"Erro: {str(e)}"
 
 # Funções exponenciais #
 
+def exponencial(a):
+    try:
+        return math.exp(a)
+    except Exception as e:
+        return f"Erro: {str(e)}"
 
+def potencia(a, b):
+    try:
+        return math.pow(a, b)
+    except Exception as e:
+        return f"Erro: {str(e)}"
 
-# Raizes e Potencias #
+# Raízes e Potências #
 
+def raiz_quadrada(a):
+    try:
+        return math.sqrt(a)
+    except Exception as e:
+        return f"Erro: {str(e)}"
 
+def raiz_cubica(a):
+    try:
+        return math.pow(a, 1/3)
+    except Exception as e:
+        return f"Erro: {str(e)}"
 
-# Funções de Numeros Complexos #
+# Funções de Números Complexos #
 
+def parte_real(a, b):
+    try:
+        return a.real
+    except Exception as e:
+        return f"Erro: {str(e)}"
 
+def parte_imaginaria(a, b):
+    try:
+        return a.imag
+    except Exception as e:
+        return f"Erro: {str(e)}"
+
+def conjugado(a):
+    try:
+        return a.conjugate()
+    except Exception as e:
+        return f"Erro: {str(e)}"
 
 # Constantes #
 
-
+PI = math.pi
+E = math.e
+GRAUS_PARA_RADIANOS = math.radians(1)
+RADIANOS_PARA_GRAUS = math.degrees(1)
 
 # Outras Funções#
+
+def fatorial(a):
+    try:
+        return math.factorial(a)
+    except Exception as e:
+        return f"Erro: {str(e)}"
+
+def combinacao(n, k):
+    try:
+        return math.comb(n, k)
+    except Exception as e:
+        return f"Erro: {str(e)}"
+
+def permutacao(n, k):
+    try:
+        return math.perm(n, k)
+    except Exception as e:
+        return f"Erro: {str(e)}"
