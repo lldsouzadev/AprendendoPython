@@ -2,40 +2,48 @@
 
 /* Corpo da Página */
 body {
-    background-color: #f8f9fa; /* Cor de fundo suave para toda a página */
+    background-color: #121212; /* Cor de fundo escura para toda a página */
+    color: #e0e0e0; /* Cor do texto clara */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilo para o Cabeçalho (H1) */
 h1 {
-    color: #343a40; /* Cor do texto do título */
+    color: #ffffff; /* Cor do texto do título */
     text-align: center; /* Centralizar o título */
     margin-bottom: 2rem; /* Espaçamento abaixo do título */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
 }
 
 /* Estilo para Labels */
 label {
     font-weight: bold; /* Tornar o texto dos labels em negrito */
-    color: #495057; /* Cor suave para os labels */
+    color: #e0e0e0; /* Cor clara para os labels */
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 /* Estilo para Dropdowns */
 .Select-control {
-    background-color: #ffffff; /* Fundo branco para o dropdown */
-    border: 1px solid #ced4da; /* Borda cinza suave */
+    background-color: #333333; /* Fundo escuro para o dropdown */
+    border: 1px solid #444444; /* Borda cinza escura */
     border-radius: 4px; /* Bordas arredondadas */
     padding: 0.375rem 0.75rem; /* Padding interno */
     font-size: 1rem; /* Tamanho da fonte */
-    color: #495057; /* Cor do texto */
+    color: #e0e0e0; /* Cor do texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave */
 }
 
 /* Estilo para o Gráfico */
 #grafico-vendas {
-    background-color: #ffffff; /* Fundo branco para o gráfico */
-    border: 1px solid #ced4da; /* Borda cinza suave */
+    background-color: #333333; /* Fundo escuro para o gráfico */
+    border: 1px solid #444444; /* Borda cinza escura */
     border-radius: 5px; /* Bordas arredondadas */
     padding: 20px; /* Padding interno */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra suave */
 }
 
 /* Espaçamento Inferior para as Rows */
@@ -46,6 +54,122 @@ label {
 /* Estilo para o Container Principal */
 .container-fluid {
     padding: 2rem; /* Padding interno para o container */
+    background-color: #121212; /* Fundo escuro para o container */
+}
+
+/* Estilo para os Cards */
+.card {
+    background-color: #333333; /* Fundo escuro para os cards */
+    border: 1px solid #444444; /* Borda cinza escura */
+}
+
+/* Estilo para os Inputs */
+input, .Select-control, .dash-datepicker input {
+    background-color: #333333; /* Fundo escuro para os inputs */
+    color: #e0e0e0; /* Cor do texto clara */
+    border: 1px solid #444444; /* Borda cinza escura */
+}
+
+/* Estilo para os Botões */
+button {
+    background-color: #444444; /* Fundo escuro para os botões */
+    color: #e0e0e0; /* Cor do texto clara */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Padding interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+button:hover {
+    background-color: #555555; /* Fundo mais claro ao passar o mouse */
+}
+
+/* Estilo para a Tabela */
+.dash-table-container .dash-spreadsheet-inner {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet {
+    background-color: #121212; /* Fundo escuro para a tabela */
+}
+
+/* Alinhar a barra de navegação da tabela à esquerda */
+.dash-spreadsheet-container .dash-spreadsheet-inner .dash-spreadsheet-pagination {
+    justify-content: flex-start;
+}
+
+/* Mover o botão azul para o lado esquerdo */
+._dash-debug-menu {
+    left: 0;
+    right: auto;
 }
 
 /* Responsividade para Telas Menores */
