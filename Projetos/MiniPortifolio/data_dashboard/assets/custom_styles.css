@@ -1,0 +1,64 @@
+/* assets/custom_styles.css */
+
+/* Corpo da Página */
+body {
+    background-color: #f8f9fa; /* Cor de fundo suave para toda a página */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão */
+}
+
+/* Estilo para o Cabeçalho (H1) */
+h1 {
+    color: #343a40; /* Cor do texto do título */
+    text-align: center; /* Centralizar o título */
+    margin-bottom: 2rem; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para Labels */
+label {
+    font-weight: bold; /* Tornar o texto dos labels em negrito */
+    color: #495057; /* Cor suave para os labels */
+}
+
+/* Estilo para Dropdowns */
+.Select-control {
+    background-color: #ffffff; /* Fundo branco para o dropdown */
+    border: 1px solid #ced4da; /* Borda cinza suave */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 0.375rem 0.75rem; /* Padding interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #495057; /* Cor do texto */
+}
+
+/* Estilo para o Gráfico */
+#grafico-vendas {
+    background-color: #ffffff; /* Fundo branco para o gráfico */
+    border: 1px solid #ced4da; /* Borda cinza suave */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Padding interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Espaçamento Inferior para as Rows */
+.mb-4 {
+    margin-bottom: 2rem !important; /* Espaçamento maior abaixo das rows */
+}
+
+/* Estilo para o Container Principal */
+.container-fluid {
+    padding: 2rem; /* Padding interno para o container */
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Reduzir o tamanho do título em telas pequenas */
+    }
+
+    .Select-control {
+        width: 100%; /* Dropdown ocupa toda a largura */
+    }
+
+    #grafico-vendas {
+        padding: 10px; /* Reduzir o padding do gráfico */
+    }
+}
